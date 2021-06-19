@@ -1,0 +1,13 @@
+1) Version: 14.0.0.1 | Date : 05/01/2021
+-->  Add company_id field on Import sale pricelist, Import vendor pricelist and import product pricelist.
+
+=>  14.0.0.2 : Improved an index as per latest changes.
+
+Version: 14.0.0.3 | Date : 07/01/2021
+-->  If we have PRICELIST for company and if user added same PRICELIST without company on file then create new pricelist without company.
+
+
+14.0.0.4 ==> fixed issue when in the file we have not given the value in the anyone of the field then it ignore rest of the field although we have given the values of the rest of the field like max margin, min margin,surcharge, rouding ..
+
+14.0.0.5 ==>Improvement:1.added wizard for Import Sale Pricelist -Select Option from Wizard.
+                        2.added method for Import Sale Pricelist -Select Option from Wizard.

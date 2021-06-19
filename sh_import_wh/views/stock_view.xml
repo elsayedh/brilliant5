@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- SALE ORDER FORM VIEW -->
+    <record id="sh_inherit_view_stock_picking_form_for_import" model="ir.ui.view">
+        <field name="name">sh.inherit.view.stockPicking.form.for.import</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="after">
+                <header>
+                <button name="sh_import_wh" string="Import Delivery Lines" type="object" states="assigned" groups="sh_import_wh.sh_import_wh_group" class="btn-primary" context="{'sh_wh_id':id}" />
+                </header>
+            </xpath>
+        </field>
+    </record>
+</odoo>

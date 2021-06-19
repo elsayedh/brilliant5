@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_import_wh_wizard" model="ir.ui.view">
+        <field name="name">sh.import.wh.wizard</field>
+        <field name="model">import.wh.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Import Delivery stock Lines">
+                <group>
+                    <field name="import_type" widget="radio" />
+                    <field name="product_by" widget="radio" />
+                    <field name="file" />
+                </group>
+                <footer>
+                    <button name="import_wh_apply" string="Apply" type="object" class="btn-primary" />
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                    <div style="float: right;">
+                        <strong>Download Sample:</strong>
+                        <a role="button" href="/sh_import_wh/static/download/Import Delivery Stock Line.csv" class="btn-primary" style="margin: 0 10px; font-size: 12px; line-height: 1.5; border-radius: 3px; padding: 8px 10px; color: #ffffff;">
+                            <i class="fa fa-download" /> CSV file
+                        </a>
+<!--                        <a role="button" href="/sh_import_wh/static/download/Import Delivery Stock Line.xls" class="btn-primary" style="font-size: 12px; line-height: 1.5; border-radius: 3px; padding: 8px 10px; color: #ffffff;">-->
+<!--                            <i class="fa fa-download" /> Excel file-->
+<!--                        </a> -->
+
+                         <button name="action_generate_excel" string="Excel file" type="object" class="btn-primary" />
+                    </div>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sh_import_wh_action" model="ir.actions.act_window">
+        <field name="name">Import Delivery Stock Lines</field>
+        <field name="res_model">import.wh.wizard</field>
+        <field name="view_id" ref="sh_import_wh_wizard" />
+        <field name="target">new</field>
+    </record>
+</odoo>

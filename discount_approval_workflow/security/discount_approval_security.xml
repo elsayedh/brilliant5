@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+             <record model="ir.module.category" id="module_category_discount_approval">
+            <field name="name">Discount Management</field>
+            <field name="description">Discount Management </field>
+            <field name="sequence">14</field>
+        </record>
+
+        <record id="discount_approval_manager" model="res.groups">
+            <field name="name">Discount Approval Manager</field>
+            <field name="category_id" ref="discount_approval_workflow.module_category_discount_approval"/>
+        </record>
+
+              <record id="discount_approval_director" model="res.groups">
+            <field name="name">Discount Approval Director</field>
+            <field name="category_id" ref="discount_approval_workflow.module_category_discount_approval"/>
+        </record>
+
+  <record id="base.module_category_sales_sales" model="ir.module.category">
+            <field name="description">Helps you handle your quotations, sale orders and invoicing.</field>
+            <field name="sequence">1</field>
+        </record>
+
+
+    </data>
+</odoo>

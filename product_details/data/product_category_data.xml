@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="product.category" id="module_category_Surge_Protectors">
+            <field name="name">Surge Protectors</field>
+
+        </record>
+
+
+
+    </data>
+</odoo>
